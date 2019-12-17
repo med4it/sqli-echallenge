@@ -19,6 +19,6 @@ public interface IMembersFormatter {
     public String format(List<TeamMember> members);
 
     //Format a string value from one team member arg
-    //example of expected restult "tester:Nora"
-    public String format(TeamMember members);
+    //example of expected result "tester:Nora"
+    public String format(TeamMember member);
 }

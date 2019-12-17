@@ -41,7 +41,7 @@ public class MembersFormatter implements IMembersFormatter {
     }
 
     @Override
-    public String format(TeamMember members) {
-        return members.getRole().toString() + ":" + members.getName();
+    public String format(TeamMember member) {
+        return member.getRole().toString() + ":" + member.getName();
     }
 }
