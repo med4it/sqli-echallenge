@@ -23,10 +23,15 @@ public class MembersFormatter implements IMembersFormatter {
         List<String> formattedDevsList = Arrays.asList(formattedDevsArray);
         formattedDevsList.forEach(member -> {
             String[] nameThenType = member.split(":");
-            switch (nameThenType[1]){
-                case BACKEND: teamMembers.add(new BackendDeveloper(nameThenType[0])); break;
-                case FRONTEND: teamMembers.add(new FrontendDeveloper(nameThenType[0])); break;
-                case TESTER: teamMembers.add(new Tester(nameThenType[0]));
+            switch (nameThenType[1]) {
+                case BACKEND:
+                    teamMembers.add(new BackendDeveloper(nameThenType[0]));
+                    break;
+                case FRONTEND:
+                    teamMembers.add(new FrontendDeveloper(nameThenType[0]));
+                    break;
+                case TESTER:
+                    teamMembers.add(new Tester(nameThenType[0]));
             }
         });
 
@@ -36,8 +41,8 @@ public class MembersFormatter implements IMembersFormatter {
     @Override
     public String format(List<TeamMember> members) {
         return members.stream()
-                .map(member -> format(member))
-                .collect(Collectors.joining(","));
+            .map(member -> format(member))
+            .collect(Collectors.joining(","));
     }
 
     @Override

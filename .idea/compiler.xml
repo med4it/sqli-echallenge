@@ -7,6 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="com.sqli.echallenge" />
+        <module name="sqli-echallenge-2020" />
+        <module name="sqliEchallenge2020-1-" />
       </profile>
     </annotationProcessing>
   </component>
